@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>201 Salem Turnpike, 06360</title>
+</head>
+<body>
+    <h1> If you are reading this, You have either found my Github page and are stalking me. Or have scanned the NFC in my wallet.</h1>
+	<h3> The title of this webpage is a address. Please return this wallet to said address, Thank you for co-operating </h3>
+    <audio autoplay>
+        <source src="audio/audio.m4a" type="audio/mp4">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+<html>
+<head>
+    <style>
+        @keyframes flash {
+            65% { background-color: red; }
+            10% { background-color: blue; }
+            55% { background-color: green; }
+            24% { background-color: yellow; }
+            13% { background-color: red; }
+        }
+
+        body {
+            animation: flash 0.01s infinite;
+        }
+    </style>
+</head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .bouncing-img {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-image: url('dvd-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+<body>
+    <div class="bouncing-img"></div>
+
+    <script>
+        // Get the image element
+        const img = document.querySelector('.bouncing-img');
+
+        // Set the initial position and velocity
+        let posX = Math.random() * (window.innerWidth - img.clientWidth);
+        let posY = Math.random() * (window.innerHeight - img.clientHeight);
+        let velX = 2; // Horizontal velocity
+        let velY = 2; // Vertical velocity
+
+        function moveImage() {
+            // Update the position
+            posX += velX;
+            posY += velY;
+
+            // Check for collision with the boundaries and reverse direction
+            if (posX + img.clientWidth >= window.innerWidth || posX <= 0) {
+                velX = -velX;
+            }
+
+            if (posY + img.clientHeight >= window.innerHeight || posY <= 0) {
+                velY = -velY;
+            }
+
+            // Apply the new position to the image
+            img.style.left = posX + 'px';
+            img.style.top = posY + 'px';
+
+            // Request the next frame
+            requestAnimationFrame(moveImage);
+        }
+
+        // Start the animation
+        moveImage();
+
+        // Adjust the image position when the window is resized
+        window.addEventListener('resize', () => {
+            posX = Math.min(posX, window.innerWidth - img.clientWidth);
+            posY = Math.min(posY, window.innerHeight - img.clientHeight);
+        });
+    </script>
+<body>
+	</html>
